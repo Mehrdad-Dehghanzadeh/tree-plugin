@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "title": "group1",
+    "Code": 10,
+    "children": [
+      {
+        "id": 1004,
+        "title": "sg1",
+        "Code": 10,
+        "children": [
+          {
+            "id": 1007,
+            "link": {
+              "href": "#",
+              "id": "pasc",
+              "title": "ssg1"
+            },
+            "Code": 10,
+            "children": [
+              {
+                "Id": 1010,
+                "title": "sssg1",
+                "Code": 10000,
+                "children": [
+                  {
+                    "Id": 1012,
+                    "title": "ssssg1",
+                    "Code": 20000,
+                    "children": []
+                  },
+                  {
+                    "Id": 1013,
+                    "title": "ssssg2",
+                    "Code": 20001,
+                    "children": [
+                      {
+                        "Id": 1014,
+                        "title": "ssssssg1",
+                        "Code": 30000,
+                        "children": [
+                          {
+                            "Id": 1016,
+                            "title": "fdasfre",
+                            "Code": 40000,
+                            "children": []
+                          }
+                        ]
+                      },
+                      {
+                        "Id": 1015,
+                        "title": "fasrfgargf",
+                        "Code": 30001,
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "Id": 1011,
+                "title": "sssg2",
+                "Code": 10001,
+                "children": []
+              }
+            ]
+          },
+          {
+            "Id": 1008,
+            "title": "ssg2",
+            "Code": 11,
+            "children": []
+          },
+          {
+            "Id": 1009,
+            "title": "ssg3",
+            "Code": 12,
+            "children": []
+          }
+        ]
+      },
+      {
+        "Id": 1005,
+        "title": "sg2",
+        "Code": 11,
+        "children": []
+      },
+      {
+        "Id": 1006,
+        "title": "sg3",
+        "Code": 12,
+        "children": []
+      }
+    ]
+  },
+
+  {
+    "Id": 2,
+    "title": "group2",
+    "Code": 11,
+    "children": []
+  },
+
+  {
+    "Id": 1002,
+    "title": "group3",
+    "Code": 12,
+    "children": []
+  },
+
+  {
+    "Id": 1003,
+    "title": "g4",
+    "Code": 13,
+    "children": []
+  }
+]

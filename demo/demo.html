@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <%= htmlWebpackPlugin.tags.headTags %>
+  </head>
+
+  <body>
+    <root>
+      <div
+        style="max-width: 300px; margin: 40px"
+        data-plugin_tree='{"ajax": "./treeItems.json"}'
+      ></div>
+    </root>
+
+    <%= htmlWebpackPlugin.tags.bodyTags %>
+    <script type="text/javascript"></script>
+  </body>
+</html>
