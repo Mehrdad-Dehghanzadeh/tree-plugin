@@ -1,3 +1,5 @@
+import { createTree } from './lib/_tree';
+
 (function ($) {
   let pluginName = 'tree';
   let defaults = {
@@ -19,6 +21,7 @@
   $.extend(Tree.prototype, {
     init: function () {
       this.isAjax = !!this.settings.ajax;
+      createTree(this);
     },
   });
 
