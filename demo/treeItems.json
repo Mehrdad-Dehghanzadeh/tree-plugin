@@ -1,80 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "group1",
-    "Code": 10,
-    "parentId": null,
-    "children": [
-      {
-        "id": 1004,
-        "title": "sg1",
-        "Code": 10,
-        "parentId": 1,
-        "children": [
-          {
-            "id": 1007,
-            "title": "ssg1",
-            "Code": 10,
-            "parentId": 1004,
-            "children": [
-              {
-                "id": 1011,
-                "title": "sssg2",
-                "Code": 10001,
-                "parentId": 1007,
-                "children": [
-                  {
-                    "id": 1120,
-                    "title": "test1",
-                    "Code": 112,
-                    "parentId": 1011,
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": 1010,
-                "title": "wqewewew  wewe",
-                "Code": 10000,
-                "parentId": 1007,
-                "children": []
-              }
-            ]
-          },
-          {
-            "id": 1008,
-            "title": "ssg2",
-            "Code": 11,
-            "parentId": 1004,
-            "children": []
-          },
-          {
-            "id": 1009,
-            "title": "ssg3",
-            "Code": 12,
-            "parentId": 1004,
-            "children": []
-          }
-        ]
-      },
-      {
-        "id": 1005,
-        "title": "sg2",
-        "Code": 11,
-        "parentId": 1,
-        "children": []
-      },
-      {
-        "id": 1006,
-        "title": "sg3",
-        "Code": 12,
-        "parentId": 1,
-        "children": []
-      }
-    ]
-  },
-
-  {
     "id": 2,
     "title": "group2",
     "Code": 11,
@@ -193,7 +118,22 @@
     "title": "group3",
     "Code": 12,
     "parentId": null,
-    "children": []
+    "children": [
+      {
+        "id": 1003,
+        "title": "22",
+        "Code": 12,
+        "parentId": 1002,
+        "children": []
+      },
+      {
+        "id": 12,
+        "title": "1212",
+        "Code": 12,
+        "parentId": 1002,
+        "children": []
+      }
+    ]
   },
 
   {
