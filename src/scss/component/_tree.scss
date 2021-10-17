@@ -3,13 +3,13 @@
   overflow: auto;
   width: 100%;
   padding: 15px 0;
-  justify-content: space-between;
 
   &__row {
     display: flex;
     flex: 1;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
   }
 
   &__column {
@@ -19,5 +19,67 @@
     margin-bottom: 15px;
     position: relative;
     align-items: center;
+  }
+}
+
+%tree__row-pseudo {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 3px;
+  top: -30px;
+  height: 20px;
+  background-color: red;
+}
+
+.tree > .tree__row > .tree__column .tree__row {
+  &:before {
+    right: 50%;
+    @extend %tree__row-pseudo;
+  }
+}
+
+.tree > .tree__row > .tree__column .tree__row > .tree__column:last-child {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 50%;
+    height: 3px;
+    top: -10px;
+    background-color: red;
+  }
+}
+
+.tree > .tree__row > .tree__column .tree__row > .tree__column:first-child {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 3px;
+    top: -10px;
+    background-color: red;
+  }
+}
+
+.tree > .tree__row > .tree__column .tree__row > .tree__column {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    top: -10px;
+    background-color: red;
+  }
+}
+
+.tree__column--single .tree__column {
+  &:before {
+    display: none !important;
   }
 }

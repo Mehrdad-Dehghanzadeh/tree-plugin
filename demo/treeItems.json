@@ -53,6 +53,28 @@
             "title": "ssg3",
             "Code": 12,
             "parentId": 1004,
+            "children": [
+              {
+                "id": 1019,
+                "title": "swqe2",
+                "Code": 123,
+                "parentId": 1009,
+                "children": []
+              },
+              {
+                "id": 1020,
+                "title": "wqeqwedsas",
+                "Code": 1232,
+                "parentId": 1009,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 1008,
+            "title": "ssg8",
+            "Code": 18,
+            "parentId": 1004,
             "children": []
           }
         ]

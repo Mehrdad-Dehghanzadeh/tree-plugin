@@ -3,7 +3,6 @@ export function nodeTemplate(item) {
     '<div class="node">' +
       '<strong class="node__title">' +
       item.title +
-      item.id +
       '</strong>' +
       '</div>'
   );

@@ -28,7 +28,7 @@ function createRow(parent, nodes) {
   parent.append(row);
   for (let node of nodes) {
     const nodeTemp = nodeTemplate(node);
-    let columnTemplate = createColumn(nodeTemp);
+    let columnTemplate = createColumn(nodeTemp, node.children);
     row.append(columnTemplate);
 
     if (node.children.length > 0) {
@@ -37,8 +37,10 @@ function createRow(parent, nodes) {
   }
 }
 
-function createColumn(nodeTemplate) {
+function createColumn(nodeTemplate, children) {
+  let length = !!children ? children.length : 0;
   const column = $('<div class="tree__column"></div>');
+  if (length === 1) column.addClass('tree__column--single');
   column.append(nodeTemplate);
 
   return column;
