@@ -21,60 +21,64 @@
     align-items: center;
   }
 }
+$line-color: #bfc0c1;
+$line-size: 1px;
 
-%tree__row-pseudo {
+%tree__horizontal-line {
   content: '';
   display: block;
   position: absolute;
-  width: 3px;
-  top: -30px;
-  height: 20px;
-  background-color: red;
+  width: $line-size;
+  right: 50%;
+  background-color: $line-color;
 }
 
-.tree > .tree__row > .tree__column .tree__row {
+%tree__vertical-line {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -35px;
+  height: $line-size;
+  background-color: $line-color;
+}
+
+.first-level .tree__row {
   &:before {
-    right: 50%;
-    @extend %tree__row-pseudo;
+    top: -70px;
+    height: 35px;
+    @extend %tree__horizontal-line;
   }
 }
 
-.tree > .tree__row > .tree__column .tree__row > .tree__column:last-child {
+.first-level .tree__column {
+  &:after {
+    top: -35px;
+    height: 30px;
+    @extend %tree__horizontal-line;
+  }
+}
+
+.first-level .tree__row > .tree__column:last-child {
   &:before {
-    content: '';
-    display: block;
-    position: absolute;
     width: 50%;
     right: 50%;
-    height: 3px;
-    top: -10px;
-    background-color: red;
+    @extend %tree__vertical-line;
   }
 }
 
-.tree > .tree__row > .tree__column .tree__row > .tree__column:first-child {
+.first-level .tree__row > .tree__column:first-child {
   &:before {
-    content: '';
-    display: block;
-    position: absolute;
     width: 50%;
     left: 50%;
-    height: 3px;
-    top: -10px;
-    background-color: red;
+    @extend %tree__vertical-line;
   }
 }
 
-.tree > .tree__row > .tree__column .tree__row > .tree__column {
+.first-level .tree__row > .tree__column {
   &:before {
-    content: '';
-    display: block;
-    position: absolute;
     left: 0;
     right: 0;
-    height: 3px;
-    top: -10px;
-    background-color: red;
+    @extend %tree__vertical-line;
   }
 }
 

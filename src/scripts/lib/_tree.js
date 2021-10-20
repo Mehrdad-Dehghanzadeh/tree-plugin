@@ -2,7 +2,7 @@ import { readData } from './_ajax';
 import { nodeTemplate } from './_nodes';
 
 let _tree;
-
+let _firstRow;
 export function createTree(that) {
   that.tree = $('<div class="tree"></div>');
   that.element.append(that.tree);
@@ -20,6 +20,7 @@ export function setTree(nodes) {
   } catch (error) {
     throw new Error(error);
   }
+  setFirstLevel();
 }
 
 function createRow(parent, nodes) {
@@ -44,4 +45,12 @@ function createColumn(nodeTemplate, children) {
   column.append(nodeTemplate);
 
   return column;
+}
+
+function setFirstLevel() {
+  _firstRow = _tree.children('.tree__row');
+  const _firstColumn = _firstRow.children('.tree__column');
+  if (_firstColumn.length > 0) {
+    _firstColumn.addClass('first-level');
+  }
 }
