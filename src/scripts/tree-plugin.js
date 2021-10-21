@@ -6,15 +6,11 @@ import { createTree } from './lib/_tree';
     treeItems: [],
     ajax: null,
     direction: 'column',
-    justifyContent: 'space-between',
-    textAlign: 'center',
-    maxWidth: 'auto',
-    hover: false,
   };
 
   const Tree = function (element, options) {
     this.element = element;
-    this.settings = $.extend(defaults, options);
+    this.settings = $.extend({}, defaults, options);
     this.init();
   };
 

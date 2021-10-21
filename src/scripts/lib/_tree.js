@@ -1,26 +1,26 @@
 import { readData } from './_ajax';
 import { nodeTemplate } from './_nodes';
 
-let _tree;
-let _firstRow;
 export function createTree(that) {
   that.tree = $('<div class="tree"></div>');
   that.element.append(that.tree);
-  _tree = that.tree;
   if (that.isAjax) {
-    readData(that.settings.ajax, that.nodes);
+    readData(that.settings.ajax, that.nodes, that.tree);
+  } else {
+    that.nodes = that.settings.treeItems;
+    setTree(that.nodes, that.tree);
   }
 }
 
-export function setTree(nodes) {
+export function setTree(nodes, tree) {
   try {
     if (!Array.isArray(nodes))
       throw new Error('node or nodeChild is not array');
-    createRow(_tree, nodes);
+    createRow(tree, nodes);
   } catch (error) {
     throw new Error(error);
   }
-  setFirstLevel();
+  setFirstLevel(tree);
 }
 
 function createRow(parent, nodes) {
@@ -47,8 +47,8 @@ function createColumn(nodeTemplate, children) {
   return column;
 }
 
-function setFirstLevel() {
-  _firstRow = _tree.children('.tree__row');
+function setFirstLevel(tree) {
+  const _firstRow = tree.children('.tree__row');
   const _firstColumn = _firstRow.children('.tree__column');
   if (_firstColumn.length > 0) {
     _firstColumn.addClass('first-level');

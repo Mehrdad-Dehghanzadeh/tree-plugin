@@ -9,13 +9,46 @@
 
   <body>
     <root>
+      <h2 style="text-align: center">ajax treeItems</h2>
       <div
         style="margin: 40px auto"
         data-plugin_tree='{"ajax":{ "url":"./treeItems.json", "params": {}}}'
       ></div>
+
+      <h2 style="text-align: center">static treeItems</h2>
+      <div id="static-data" style="margin: auto"></div>
     </root>
 
     <%= htmlWebpackPlugin.tags.bodyTags %>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      var treeItems = [
+        {
+          id: 1,
+          title: 'root',
+          text: 11,
+          parentId: null,
+          children: [
+            {
+              id: 2,
+              title: 'group1',
+              text: 21,
+              parentId: 1,
+              children: [],
+            },
+            {
+              id: 3,
+              title: 'group2',
+              text: 123132,
+              parentId: 1,
+              children: [],
+            },
+          ],
+        },
+      ];
+
+      $('#static-data').tree({
+        treeItems: treeItems,
+      });
+    </script>
   </body>
 </html>
