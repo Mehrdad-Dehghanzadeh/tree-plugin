@@ -5,6 +5,7 @@ export function createTree(that) {
   that.tree = $('<div class="tree"></div>');
   that.element.append(that.tree);
   if (that.isAjax) {
+    that.settings.ajax.dataType = 'json';
     readData(that.settings.ajax, that.nodes, that.tree);
   } else {
     that.nodes = that.settings.treeItems;
